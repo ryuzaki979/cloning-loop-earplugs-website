@@ -289,6 +289,9 @@ font-size: .75rem;
  font-size: .9rem;
  padding: 1.5rem 0;
  cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
 }
 
 .image-description-1 .buying-place:hover {
@@ -322,9 +325,12 @@ font-size: .75rem;
     font-size: .55rem;
 }
 
+.menu-social-links {
+    display: flex;
+    align-items: center;
+}
 
-
-.menu li {
+.menu-social-links li {
     list-style: none;
     display: inline-block;
     margin: .7rem;
@@ -335,12 +341,17 @@ font-size: .75rem;
 .menu li:hover {
     color:#d79c95;
 }
-.menu li:nth-child(1) {
+.menu .fade {
     margin: 0 2rem;
     font-weight: 100;
     color: rgba(255, 255, 255, 0.829);
 }
 
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 
@@ -355,6 +366,10 @@ font-size: .75rem;
    outline: none;
    border-radius: 25px;
    cursor: pointer;
+}
+.vanish {
+    display: flex;
+    align-items: center;
 }
 .menu .nav-right:hover {
    background-color: #323232;
@@ -398,6 +413,68 @@ font-size: .75rem;
 }
 
 
+/* media queries for menu icon */
+
+
+@media only screen and (max-width: 600px) {
+    .menu-grid-3 {
+        display: none;
+    }
+
+    
+
+    .menu-grid-2 {
+        padding: 0;
+        flex-direction: column;
+    }
+    .menu-grid-2 img {
+        width: 75px;
+        margin-left: 1rem;
+    }
+    .product-price,.buying-place h2{
+        display: none;
+    }
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: .3rem 0;
+        font-size: .5rem;
+    }
+
+    .image-title {
+        display: flex;
+        align-items: center;
+    }
+
+    .buying-place i {
+        font-size: 1.3rem;
+    }
+
+    .vanish {
+        display: none;
+    }
+
+    .buying-place:hover {
+        background: none;
+    }
+    
+    
+    .menu-social-links {
+        position: absolute;
+        top: 80vh;
+        display: block;
+    }
+
+    .menu-social-links li {
+        font-size: .55rem;
+    }
+
+    .menu-navbar .logo {
+       margin: 5rem 0;
+    }
+    
+}
 
 
 
